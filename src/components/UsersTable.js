@@ -12,7 +12,7 @@ const UsersTable = () => {
         const fetchData = async () => {
             try {
                 const response = await axios.get('http://localhost:3001/users');
-                console.log('Fetched users:' , response.data);
+                // console.log('Fetched users:' , response.data); was used for debugging
                 setUsers(response.data);
                 setFilteredUsers(response.data);
             } catch (error) {
@@ -66,7 +66,7 @@ const UsersTable = () => {
             value = {filterColumn}
             onChange = {(e) => setFilterColumn(e.target.value)}
             className = "form-select mb-3"
-            style = {{matginBottom: '10px', padding : '5px',
+            style = {{marginBottom: '10px', padding : '5px',
                 width: '150px'
             }}>
                 <option value = "id">ID</option>
